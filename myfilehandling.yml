@@ -6,4 +6,9 @@
     template: 
       src: myindex.j2
       dest: /var/www/html/index.html
+  - include_tasks: myfile.yml
+  - name: copy static file into ansible node
+    copy:
+    src: mytestfile
+    dest: /home/ubuntu/mystaticfile
   
