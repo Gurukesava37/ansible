@@ -1,7 +1,8 @@
 ---
-hosts: 172.31.27.213
-become: yes
-name: install webserver
-apt:
-- name: apache2
-  state: present
+- hosts: all
+  become: yes
+  tasks:
+  - name: install webserver
+  apt:
+       name: apache2
+       state: present
