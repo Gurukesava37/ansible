@@ -2,8 +2,8 @@
 - hosts: 172.31.27.213
   become: yes
   tasks:
-  - name: copy dynamic file in node
+  - name: copy dynamic files into ansible node
     template: 
-    src: myindex.j2
-    dest: /var/www/html/index.html
+      src: myindex.j2
+      dest: /var/www/html/index.html
   
