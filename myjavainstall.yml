@@ -1,28 +1,19 @@
 ---
-- hosts: mywebserver
+- hosts: mywebservers
   become: yes
   gather_facts: yes
   tasks: 
-  - name: install webserver on ubuntu node
-    apt:
-      name: {{mywebserverpackubuntu}}
-      state: present
-    when: ansiible_os_family=="Debian"
   - name: install java on ubuntu node
     apt:
-      name: {{myjavapackubuntu}}
+      name: "{{myjavapackubuntu}}"
       state: started
     when: ansible_os_family=="Debian"
-  
-  - name: install webserver on redhat node
-    yum: 
-     name: {{mywebserverpackredhat}}
-     state: present
-    when: ansible_os_family=="RedHat"
-  - name: install java on redhat node
+  - name: install java on amazon nodes
     yum:
-      name: {{myjavapackredhat}}
-      state: started
+     name: "{{myjavapackredhat}}" 
+     state: started
     when: ansible_os_family=="RedHat"
+  
+
   
   
