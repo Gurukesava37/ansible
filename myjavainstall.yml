@@ -6,12 +6,12 @@
   - name: install java on ubuntu node
     apt:
       name: "{{myjavapackubuntu}}"
-      state: started
+      state: present
     when: ansible_os_family=="Debian"
   - name: install java on amazon nodes
     yum:
      name: "{{myjavapackredhat}}" 
-     state: started
+     state: present
     when: ansible_os_family=="RedHat"
   
 
