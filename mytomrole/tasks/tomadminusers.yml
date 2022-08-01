@@ -12,4 +12,4 @@
 - name: change host context hml file
   template: 
     src: templates/mytomhostcontext.j2
-    dest: /opy/tomcat/webapps/host-manager/META-INF/context.xml
+    dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
