@@ -4,10 +4,10 @@
     src: templates/mytomuser.j2
     dest: /opt/tomcat/conf/tomcat-users.xml
 
-- name: cahnge context xml file
+- name: change context xml file
   template: 
     src: templates/mytomcontext.j2
-    dest: opt/tomcat/webapps/manager/META-INF/context.xml
+    dest: /opt/tomcat/webapps/manager/META-INF/context.xml
 
 - name: change host context hml file
   template: 
