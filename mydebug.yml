@@ -13,10 +13,10 @@
     apt: 
       name: git
       state: present
-    when: myfisttaskresult.stderr  ==""
+    when: myfirsttaskresult.stderr  ==""
 
   - name: i want to install tree
     apt: 
       name: tree
       state: present
-    when: myfisttaskresult.stderr  !==""
+    when: myfirsttaskresult.stderr  !==""
