@@ -7,8 +7,6 @@
     copy:
      src: mytestfile
      dest: /home/ubuntu/mystaticfile
-    notify:
-     - startwebserver
 
   - name: download internet files into node
     get_url:
